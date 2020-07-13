@@ -1,7 +1,9 @@
 FROM ubuntu:20.04 
 MAINTAINER Sergio Sánchez "codebook@example.com" 
 RUN apt-get update
-RUN apt-get install -y nginx
-COPY index.html /usr/share/nginx/html/
+RUN apt-get install -y 
+RUN apt-get update
+RUN apt-get install php-fpm
+COPY /home/ubuntu/loginV4 /usr/share/nginx/html/
 ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
 EXPOSE 80
