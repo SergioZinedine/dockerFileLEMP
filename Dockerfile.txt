@@ -1,8 +1,7 @@
 FROM ubuntu:20.04 
-MAINTAINER Sergio Sánchez "codebook@example.com" 
+MAINTAINER Sergio Sánchez "codExcute@example.com" 
 RUN apt-get update
 RUN apt-get install -y 
-RUN apt-get update
 RUN apt-get install php-fpm
 COPY /home/ubuntu/loginV4 /usr/share/nginx/html/
 ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
